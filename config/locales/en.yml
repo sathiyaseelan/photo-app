@@ -21,3 +21,11 @@
 
 en:
   hello: "Hello world"
+  devise:
+    mailer:
+      confirmation_instructions:
+        action: "Confirm my account"
+        greeting: "Welcome %{recipient}!"
+        instruction: "Please confirm your account email through the link below:"
+        instruction_2: "Please ignore the mail, if you don't sign up!"
+        subject: "Confirmation instructions"
