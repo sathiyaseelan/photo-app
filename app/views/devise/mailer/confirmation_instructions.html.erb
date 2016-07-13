@@ -1,5 +1,6 @@
 <p><%= t('.greeting', :recipient => @resource.email, :default => "Welcome #{@resource.email.split('@').first}!") %></p>
 
+<p><%= t('.instruction', :default => "Welcome to the Photo Store app.The Complete destination for the Storage of beloved photos:") %></p>
 <p><%= t('.instruction', :default => "You can confirm your account email through the link below:") %></p>
 
 <p><%= link_to t('.action', :default => "Confirm my account"),
