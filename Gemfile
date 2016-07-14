@@ -18,6 +18,12 @@ gem 'therubyracer', platforms: :ruby
 gem 'devise'
 # Gem for payment using stripe
 gem 'stripe'
+# Gem for File Upload
+gem 'carrierwave'
+# Gem for Image Editing
+gem 'mini_magick'
+# Gem for Cloud interaction
+gem 'fog'
 # Gem for bootstrap
 gem 'twitter-bootstrap-rails'
 # Gem for bootstrap views of devise
