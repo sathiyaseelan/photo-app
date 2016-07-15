@@ -8,6 +8,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Tangerine" %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
     <!-- Size should be 144 x 144 pixels -->
@@ -51,8 +52,8 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to "Gallery", images_path  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to "Link2", "#"  %></li>
+            <li><%= link_to "Link3", "#"  %></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
