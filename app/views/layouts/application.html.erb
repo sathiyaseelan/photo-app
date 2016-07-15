@@ -39,33 +39,34 @@
   <body>
 
     <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">PhotoApp</a>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">PhotoApp</a>
+        </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
+            <li><%= link_to "Gallery", images_path  %></li>
             <li><%= link_to "Link2", "/path2"  %></li>
             <li><%= link_to "Link3", "/path3"  %></li>
           </ul>
-          <ul class="nav navbar-right col-md-4">
+          <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
-            <li class="col-md-8 user-name">
+            <li>
               <%= link_to ('<i class="fa fa-user"></i>' +truncate(current_user.email, length: 25)).html_safe,
                edit_user_registration_path, title: 'Edit Profile' %>
             </li>
-            <li class="col-md-1"> </li>
-            <li class="col-md-3 logout">
-              <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn btn-danger btn-xs',
+            <li>
+              <%= link_to 'Sign out', destroy_user_session_path, method: :delete,
                title: 'Signout' %>
             </li>
             <% else %>
-            <li class="col-md-4 pull-right">
-              <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In'%>
+            <li>
+              <%= link_to 'Sign In', new_user_session_path, title: 'Sign In'%>
             </li>
             <% end %>
           </ul>
@@ -75,21 +76,10 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-md-12">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-        <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <h3>Sidebar</h3>
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
       </div><!--/row-->
 
       <footer>
